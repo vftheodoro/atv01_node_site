@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<div class="container mt-5">
+
+  <h1 class="text-center mb-4">História do ChatGPT</h1>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-hover align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>Ano</th>
+          <th>Marco</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% historia.forEach(item => { %>
+          <tr>
+            <td><%= item.ano %></td>
+            <td><%= item.marco %></td>
+            <td><%= item.descricao %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<%- include('partials/footer') %>
